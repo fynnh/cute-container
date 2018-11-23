@@ -5,13 +5,13 @@ RUN apt-get update && apt-get install -y \
     iproute2 \
     curl \
     sudo \
-    pyro4 \
     python3-pip \
- && pip3 install begins \
+    netcat \
  && rm -rf /var/lib/apt/lists/* \
  && useradd -m pi \
  && echo 'pi ALL=NOPASSWD: ALL' > /etc/sudoers.d/pi
 
+RUN pip3 install begins pyro4 numpy
 COPY docker-entrypoint.sh /
 USER pi
 WORKDIR /home/pi/

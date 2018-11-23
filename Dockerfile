@@ -14,5 +14,6 @@ RUN apt-get update && apt-get install -y \
 
 COPY docker-entrypoint.sh /
 USER pi
+WORKDIR /home/pi/
 ENTRYPOINT ["/docker-entrypoint.sh"]
 

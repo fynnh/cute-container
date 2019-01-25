@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
  && useradd -m pi \
  && echo 'pi ALL=NOPASSWD: ALL' > /etc/sudoers.d/pi
 
-RUN pip3 install begins pyro4 numpy portalocker
+RUN pip3 install begins pyro4 numpy portalocker scipy
 COPY docker-entrypoint.sh /
 USER pi
 WORKDIR /home/pi/

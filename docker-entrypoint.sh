@@ -8,5 +8,5 @@ if [ $? -ne 0 ]; then
 fi
 
 set -e
-export PYTHONPATH=$PYTHONPATH:/home/pi/lib_emulator/:/home/pi/emulated_modules
+export PYTHONPATH=$PYTHONPATH:/home/pi/lib_emulator/:/home/pi/emulated_modules:/home/pi/program
 exec "$@"

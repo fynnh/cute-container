@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
     sudo \
     python3-pip \
     netcat \
+    libzbar0 \
  && rm -rf /var/lib/apt/lists/* \
  && useradd -m pi \
  && echo 'pi ALL=NOPASSWD: ALL' > /etc/sudoers.d/pi
